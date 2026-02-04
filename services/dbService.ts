@@ -15,13 +15,14 @@ import { getDatabase, ref, onValue, set, update, get } from "https://www.gstatic
  */
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAbzCO-CQhAFWBiDWN7m-QkljSlZ78oHzA", 
-  authDomain: "holopad-4d752.firebaseapp.com",
-  databaseURL: https://holopad-4d752-default-rtdb.europe-west1.firebasedatabase.app, // <--- Molto importante per la sincronizzazione
-  projectId: "holopad-4d752",
-  storageBucket: "holopad-4d752.firebasestorage.app",
-  messagingSenderId: "252435766194",
-  appId: "1:252435766194:web:7be38bdecf437d99f762ab"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 // Inizializzazione Firebase
